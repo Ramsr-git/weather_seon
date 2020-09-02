@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "weather_seon",
+    "name": "Today weather",
     "slug": "weather_seon",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,16 +8,17 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#B8E9FF"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.Seonbox.Weather_Seon"
     },
     "web": {
       "favicon": "./assets/favicon.png"

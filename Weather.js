@@ -9,24 +9,24 @@ const weatherOptions = {
     iconName: "weather-hazy",
     gradient: ["#4DA0B0", "#D39D38"],
     title: "Smoke is a yellow sky.",
-    subtitle: "Before you go out, make sure to wear a mask! 😷",
+    subtitle: "Before you go out, make sure to wear a mask!",
   },
   Thunderstorm: {
     iconName: "weather-lightning",
     gradient: ["#4b6cb7", "#182848"],
     title: "Watch out for thunderstorms!",
-    subtitle: "I think I'd better stay at home today. 😂",
+    subtitle: "I think I'd better stay at home today.",
   },
   Drizzle: {
     iconName: "weather-rainy",
     gradient: ["#0082c8", "#667db6"],
-    title: "It's raining little by little. 🤔",
+    title: "It's raining little by little.",
     subtitle: "I'd like a portable umbrella today!",
   },
   Rain: {
     iconName: "weather-pouring",
     gradient: ["#00d2ff", "#3a7bd5"],
-    title: "Are you going out now? 😂",
+    title: "Are you going out now?",
     subtitle: "Are you going out even if it rains?",
   },
   Snow: {
@@ -50,7 +50,7 @@ const weatherOptions = {
   Clouds: {
     iconName: "weather-cloudy",
     gradient: ["#757f9a", "#d7dde8"],
-    title: "There are too many clouds...🤔",
+    title: "There are too many clouds...",
     subtitle: "Will it rain from the sky?",
   },
   Mist: {
@@ -62,7 +62,7 @@ const weatherOptions = {
   Dust: {
     iconName: "weather-fog",
     gradient: ["#6d6027", "#d3cbb8"],
-    title: "Get your mask before you go out. 😷",
+    title: "Get your mask before you go out.",
     subtitle: "There's a lot of dust outside today.",
   },
 };
@@ -86,7 +86,7 @@ export default function Weather({ temp, condition, name }) {
       <View style={{ ...styles.halfContainer, ...styles.textContainer }}>
         <Text style={styles.title}>{weatherOptions[condition].title}</Text>
         <Text style={styles.subtitle}>
-          {weatherOptions[condition].subtitle}
+          💬 {weatherOptions[condition].subtitle}
         </Text>
       </View>
     </LinearGradient>
@@ -134,13 +134,12 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 31,
     fontWeight: "300",
-    marginBottom: 10,
-    fontStyle: "italic",
+    marginBottom: 15,
   },
   subtitle: {
     fontWeight: "600",
     color: "white",
-    fontSize: 22,
+    fontSize: 20,
   },
   textContainer: {
     paddingHorizontal: 20,
