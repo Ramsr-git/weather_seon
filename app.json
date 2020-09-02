@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Today weather",
-    "slug": "weather_seon",
+    "slug": "weather_kor",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
