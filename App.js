@@ -15,6 +15,7 @@ export default class extends React.Component {
     const {
       data: {
         main: { temp },
+        name,
         weather,
       },
     } = await axios.get(
@@ -24,6 +25,7 @@ export default class extends React.Component {
       isLoading: false,
       condition: weather[0].main,
       temp,
+      name,
     });
   };
   getLocation = async () => {
@@ -34,21 +36,18 @@ export default class extends React.Component {
       } = await Location.getCurrentPositionAsync();
       this.getWeather(latitude, longitude);
     } catch (error) {
-      Alert.alert(
-        "위치를 찾을 수 없음",
-        "설정에서 위치 서비스를 허용해 주세요."
-      );
+      Alert.alert("Can't find you.", "설정에서 위치 서비스를 허용해 주세요.");
     }
   };
   componentDidMount() {
     this.getLocation();
   }
   render() {
-    const { isLoading, temp, condition } = this.state;
+    const { isLoading, temp, condition, name } = this.state;
     return isLoading ? (
       <Loading />
     ) : (
-      <Weather temp={Math.round(temp)} condition={condition} />
+      <Weather temp={Math.round(temp)} condition={condition} name={name} />
     );
   }
 }
